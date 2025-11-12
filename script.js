@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
      
       setTimeout(() => (successMessage.hidden = true), 4000);
     } else {
-      // 若驗證未通過，清除舊的會員資料
+      
       memberInfo.innerHTML = "";
     }
   });
