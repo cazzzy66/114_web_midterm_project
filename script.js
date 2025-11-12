@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registerForm");
   const successMessage = document.getElementById("successMessage");
 
-  // 新增一個用來顯示會員資料的容器
+
   const memberInfo = document.createElement("div");
   memberInfo.id = "memberInfo";
   memberInfo.style.marginTop = "20px";
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // 清除錯誤訊息
+ 
     document.querySelectorAll(".error").forEach(e => e.textContent = "");
 
     let isValid = true;
@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (isValid) {
-      // 顯示成功訊息
+
       successMessage.hidden = false;
 
-      // 顯示會員資料
+
       memberInfo.innerHTML = `
         <h3>🎉 會員資料確認</h3>
         <p><strong>姓名：</strong> ${name}</p>
@@ -60,10 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }</p>
       `;
 
-      // 清空表單
       form.reset();
 
-      // 自動隱藏成功訊息（但保留會員資料）
+     
       setTimeout(() => (successMessage.hidden = true), 4000);
     } else {
       // 若驗證未通過，清除舊的會員資料
